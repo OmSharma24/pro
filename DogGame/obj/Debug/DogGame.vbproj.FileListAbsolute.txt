@@ -1,0 +1,11 @@
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\bin\Debug\DogGame.exe.config
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\bin\Debug\DogGame.exe
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\bin\Debug\DogGame.pdb
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\bin\Debug\DogGame.xml
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.Resources.resources
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.vbproj.GenerateResource.cache
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.vbproj.CoreCompileInputs.cache
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.exe
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.xml
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.pdb
+C:\Users\omsha\OneDrive\Desktop\DogGame\DogGame\obj\Debug\DogGame.vbprojAssemblyReference.cache
