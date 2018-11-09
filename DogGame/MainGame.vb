@@ -1,42 +1,41 @@
 ﻿Module PlayGAME
-
+     
     Public Sub Play()
-
-        Dim fileNum As Integer
-        Dim dogs As New List(Of String) 'Declare a new list of dogs
-        fileNum = FreeFile()
-
-        FileOpen(fileNum, "C:\Users\omsha\Downloads\game.txt", OpenMode.Input)
+    
+       Dim DogFile As Integer
+      Dim dogs As New List(Of String) 'Declare a new list of dogs
+        DogFile = FreeFile()
+    
+       FileOpen(DogFile, "C:\Users\omsha\Downloads\game.txt", OpenMode.Input)
 
         If IO.File.Exists("C:\Users\omsha\Downloads\game.txt") Then
 
-            While Not EOF(fileNum)
-                dogs.Add(LineInput(fileNum))
-            End While
+           While Not EOF(DogFile)
+               dogs.Add(LineInput(DogFile))
+           End While
+           FileClose(DogFile)
+    Else
+    
+          Console.WriteLine("could not find the file")
+       End If
 
-            FileClose(fileNum)
-        Else
-
-            Console.WriteLine("could not find the file")
-        End If
-
-        Cats(dogs) 'Pass the list into the subroutine "C:\Users\omsha\Downloads\game.txt"
+       Cats(dogs) 'Pass the list into the subroutine "C:\Users\omsha\Downloads\game.txt"
     End Sub
-
+    
     Function ReadNames(file)
-        Dim fileNum As Integer
+        Dim DogFile As Integer
         Dim dogs As New List(Of String) 'Declare a new list of dogs
-        fileNum = FreeFile()
+        DogFile = FreeFile()
 
-        FileOpen(fileNum, file, OpenMode.Input)
+        FileOpen(DogFile, file, OpenMode.Input)
 
         If IO.File.Exists(file) Then
 
-            While Not EOF(fileNum)
-                dogs.Add(LineInput(fileNum))
+            While Not EOF(DogFile)
+                dogs.Add(LineInput(DogFile))
             End While
 
-            FileClose(fileNum)
+            FileClose(DogFile)
         Else
 
             Console.WriteLine("could not find the file")
@@ -45,8 +44,10 @@
         Return dogs
     End Function
 
-    Public Sub Cats(data As List(Of String)) 'cats is for category
+    
 
+    Public Sub Cats(data As List(Of String)) 'cats is for category
+        
         Dim name As String
         Dim message As String = " "
 
@@ -84,8 +85,8 @@
             '  Dim cardsPlay As Integer = number
 
             Dim rounds As Integer = 1
-            Dim playerPack As New Queue(Of Dictionary(Of String, of ))
-            Dim playerPack As New Queue(Of Dictionary(Of String, of))
+            Dim playerPack As New Queue(Of Dictionary(Of String, Integer))
+
             Dim computerPack As New Queue(Of String)
 
             Dim randomEngine As New Random()
@@ -161,12 +162,12 @@ chosen category: Drool"
                     Console.WriteLine(message)
                     Dim q As New Queue(Of String)
 
-                    Dim randomEngine As New Random()
+                    'Dim randomEngine As New Random()
 
                     Randomize()
 
                     Dim index As Integer = randomEngine.Next(0, data.Count - 1) 'Data.count is the number of items in the data list (dogs)
-
+                
                     Console.WriteLine(data(index))
                     q.Enqueue(data(index))
 
@@ -267,7 +268,7 @@ Dog name:")
                     'Console.Clear()
 
                     Dim dogName1 As String = q(data(index))
-                    Dim dogName2 As String = d(data(index))
+                    Dim dogName2 As String = d(data(index2))
 
                     q.Dequeue()
                     d.Dequeue()
@@ -467,7 +468,7 @@ Computer has won this round.")
 
             Console.ReadKey()
 
-        Loop
+        'Loop
         'Next
 
 

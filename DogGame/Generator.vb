@@ -1,29 +1,27 @@
 ﻿Module ComputerDeck
     Public Sub computersDeck()
 
-        Dim fileNum As Integer
+        Dim DogFile As Integer
         Dim dogs As New List(Of String) 'Declare a new list of dogs
-        fileNum = FreeFile()
+        DogFile = FreeFile()
 
 
 
-        FileOpen(fileNum, "C:\Users\omsha\Downloads\game.txt", OpenMode.Input)
+        FileOpen(DogFile, "C:\Users\omsha\Downloads\game.txt", OpenMode.Input)
         If IO.File.Exists("C:\Users\omsha\Downloads\game.txt") Then
-
-
-
             'Dim temporary As String = LineInput(1)
-            While Not EOF(fileNum)
-                dogs.Add(LineInput(fileNum)) 'Append to the list
-                'Console.WriteLine(LineInput(fileNum))
+            While Not EOF(DogFile)
+                dogs.Add(LineInput(DogFile)) 'Append to the list
+                'Console.WriteLine(LineInput(DogFile))
             End While
-
-            FileClose(fileNum)
-        Else
+                        FileClose(DogFile) 'closing the dog file 
+                Else
             Console.WriteLine("could not find the file")
         End If
         computersCats(dogs) 'Pass the list into the subroutine
     End Sub
+
+
     'important code of the game 
     'this will be how to generate cards
 

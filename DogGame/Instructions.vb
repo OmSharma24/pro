@@ -1,5 +1,6 @@
 ﻿
 Module Module1
+
     Public Sub Instruction()
 
 
@@ -31,7 +32,7 @@ If the player won the comparison then they won that round and the next card is r
         If key = ConsoleKey.Enter Then
             Main()
         End If
-        'Loop
+        
 
     End Sub
 End Module
